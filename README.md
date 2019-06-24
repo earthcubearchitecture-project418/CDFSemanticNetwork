@@ -1,4 +1,4 @@
-# CDF Semantic Network
+# EarthCube CDF Semantic Network
 
 ## Run Index
 
