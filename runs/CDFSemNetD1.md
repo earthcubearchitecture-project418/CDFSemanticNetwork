@@ -10,7 +10,7 @@ The plan is to inlcude the config file and discussion the reasons and goals of t
 
 ## Output
 
-The results can be seen in [./runs/CDFSemNetD1](./runs/CDFSemNetD1) .   The file patterns are:
+The results can be seen in [./CDFSemNetD1](./CDFSemNetD1) .   The file patterns are:
 
 | Type           | Pattern         | Notes                                                        |
 | -------------- | --------------- | ------------------------------------------------------------ |
