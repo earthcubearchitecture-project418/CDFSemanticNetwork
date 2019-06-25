@@ -1,0 +1,15 @@
+Notes
+
+curl -X POST --header "Content-Type:application/n-quads" -d @opencoredataorg.nq http://localhost:3030/p419/data
+
+https://jena.apache.org/documentation/fuseki2/soh.html#soh-sparql-update
+https://www.w3.org/TR/2013/REC-sparql11-update-20130321/
+https://www.w3.org/TR/2013/REC-sparql11-update-20130321/#drop
+
+DROP  ( SILENT  )? (GRAPH IRIref | DEFAULT | NAMED | ALL )
+DROP () (GRAPH IRIref)
+DROP (SILENT) (GRAPH IRIref)
+
+curl -X POST --header "Content-type:application/sparql-update" -d @dropx.rq http://localhost:3030/earthcube/update
+
+
