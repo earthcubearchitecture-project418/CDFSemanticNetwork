@@ -2,7 +2,7 @@
 
 ## Run Index
 
-Quick link to the [index of runs](./DATA.md) with links to further details.  
+Quick link to the [index of runs](./docs/DATA.md) with links to further details.  
 
 ## About 
 
