@@ -83,7 +83,14 @@ automated manner.
 * Now validates the triples structure (Gleaner is now a basic RDF validation service)  Need to contrast to Google Structured Data Testing tool and JSON-LD playground.
 * Error logs generated on triple issues (ref: CDF SemNet link)
 * Scaling to > 1m to support physical samples
-* Releases (thanks to Steve and Dave with the Resource Registry work for bravely alpha testing that)  
+* Releases (thanks to Steve and Dave with the Resource Registry work for bravely alpha testing that)  (and also to Austalian Research Data Commons it turn out)
+
+> Note:  The current release 2.0.4 has NONE of these updates.  A few more updates need to be
+> tested to make sure there are no regressions before making a new release.  You can attempt 
+> to build from source if you wish to try these.  Please get in touch via the issues
+> if you are using this software so can better support and improve its usability
+
+
 
 ### GeoShapes
 
@@ -115,11 +122,18 @@ Or with good old curl:
 curl -F  'datagraph=@./datagraphs/dataset-minimal-BAD.json-ld'  -F  'shapegraph=@./shapegraphs/googleRecommended.ttl'   https://tangram.geodex.org/uploader
 ```
 
+Fence (very alpha) is a web component based page that can take a JSON-LD data graph and present various views of that graph. 
+ (http://alpha.geodex.org/fence?url=http://opencoredata.org/doc/dataset/b8d7bd1b-ef3b-4b08-a327-e28e1420adf0)
+
 ### Architecture deployment update
 
-The current P419 work related to architecture is evolving.  The current system runs on a simple docker swarm style deployment on XSEDE.  Basic K8s helm deployment files have also been develiped too.   The above Tangram instance is running using Google Cloud Run which is a scale to 0 K8s as a service (knative) service.  
+The current P419 work related to architecture is evolving.  The current system runs on a simple docker swarm style deployment on XSEDE.  Basic K8s helm deployment files have also been develiped too.   The above Tangram instance is running using Google Cloud Run which is a scale to 0 K8s as a service (knative).
 
 The Gleaner system is focused completely on Docker Engine as this time due to the simple deployment scheme for workstation style deployments that is the target of that tool.   Some initial work on Gleaner releases (https://github.com/earthcubearchitecture-project418/gleaner/releases) is also being evolved.
+
+
+Simple (VERY simple) UI at GCP, data at XSEDE pattern: http://alpha.geodex.org/fence?url=http://opencoredata.org/doc/dataset/b8d7bd1b-ef3b-4b08-a327-e28e1420adf0 
+
 
 ### Vocabulary progress
 
@@ -133,13 +147,15 @@ vocabularies can be found at the ESIP Science-on-Schema github repository.
 * https://github.com/earthcubearchitecture-project418/p419voctemporal 
 * https://github.com/ESIPFed/science-on-schema.org 
 
+[ESIP 2019 Sessions](https://drive.google.com/drive/folders/1RaMectpB9Ha-AelqOQ5NsntMuU9oa8vY)
+
 ### References
 
-1. CDF Semantic Network
+1. CDF Semantic Network:
 https://github.com/earthcubearchitecture-project418/CDFSemanticNetwork 
 2. Gleaner:
 https://github.com/earthcubearchitecture-project418/gleaner 
-3. GeoSchemas: 
+3. GeoSchemas:
 https://github.com/ESIPFed/science-on-schema.org
 4. GeoShapes:
 https://github.com/geoschemas-org/geoshapes
