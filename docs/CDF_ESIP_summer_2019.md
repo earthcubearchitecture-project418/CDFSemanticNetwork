@@ -3,7 +3,9 @@
 ## About
 
 A brief update on work taking place under Project 418/419 of interest 
-to the CDF meeting at the ESIP 2019 Summer meeting.
+to the CDF meeting at the ESIP 2019 Summer meeting.  Further context 
+for this document can be found at the Open Knowledge Network for the 
+Geoscience Report (https://www.nitrd.gov/nitrdgroups/images/7/7e/OKN-Geoscience.pdf)
 
 ## CDF Semantic Network
 
