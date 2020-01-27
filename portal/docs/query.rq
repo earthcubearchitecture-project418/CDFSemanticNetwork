@@ -1,0 +1,24 @@
+
+
+prefix schema: <http://schema.org/>
+PREFIX gas: <http://www.bigdata.com/rdf/gas#>
+SELECT ?depth ?out ?p ?o ?linkType ?linkValue {
+    SERVICE gas:service {
+         gas:program gas:gasClass "com.bigdata.rdf.graph.analytics.BFS" .
+              gas:program gas:in <https://www.bco-dmo.org> . # one or more times, specifies the initial frontier.
+                   gas:program gas:out ?out . # exactly once - will be bound to the visited vertices.
+                        gas:program gas:out1 ?depth . # exactly once - will be bound to the depth of the visited vertices.
+                             gas:program gas:out2 ?predecessor . # exactly once - will be bound to the predecessor.
+                                  gas:program gas:maxIterations 4 . # optional limit on breadth first expansion.
+                                    
+    }
+      ?out ?p ?o . # extract all edges and vertex attributes for the visited vertices.
+        
+          OPTIONAL {<<?out ?p ?o>> ?linkType ?linkValue} # extract the link attributes as well.
+          
+} 
+order by asc(?depth)
+
+
+
+

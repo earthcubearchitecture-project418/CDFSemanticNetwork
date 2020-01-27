@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  p418sparqlv2:
+    image: metaphacts/blazegraph-basic
+    ports:
+        - "8080:8080"
+    environment:
+        JAVA_XMS: 1024m
+        JAVA_XMX: 2g
+        #    labels:
+        #- "traefik.backend=p418sparql"
+        #- "traefik.port=9999" # force to pick 9999 ignore the 8080 admin port
+        #- "traefik.frontend.rule=Host:geodex.org;Method:GET,POST;PathPrefix:/blazegraph"
+    restart: on-failure
+    volumes:
+        #    - /home/fils/Data/P418/dataVolumes/p418sparqlv2/triplestore:/config
+        - /home/fils/Data/UFOKN/blazegraph-data:/blazegraph-data
+    networks:
+    - facility_default
+
+networks:
+  facility_default:
+    driver: overlay
